@@ -1,0 +1,660 @@
+/* Estilo Global */
+body {
+    font-family: 'Roboto', sans-serif;  /* Fonte moderna e limpa */
+    margin: 0;
+    padding: 0;
+    background-color: #121212;  /* Fundo preto com um toque de cinza */
+    color: #e0e0e0;  /* Texto em cinza claro */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, #2a2a2a, #1f1f1f); /* Fundo com gradiente suave */
+    overflow-x: hidden;
+}
+
+/* Container central para as seções */
+.container {
+    max-width: 800px;  /* Unificado para 800px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;  /* Unificado padding */
+    text-align: center;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 2.5em;  /* Mantido como 2.5em */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #8a2be2;  /* Roxo mais escuro */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+    animation: fadeIn 1s ease-in-out;  /* Animação de entrada suave */
+}
+
+/* Descrição Centralizada */
+.descricao {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 30px;  /* Unificado para 30px */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;  /* Aumentado para 1.6 */
+}
+
+/* Botões de Navegação */
+.header-buttons {
+    margin-bottom: 40px;
+}
+
+.button-ranking {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.2s;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-ranking:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout-button {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);  /* Gradiente com roxo mais escuro */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);  /* Sombra nos botões */
+    transition: background 0.3s, transform 0.2s;
+    margin: 20px 0;
+}
+
+.logout-button:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);
+    transform: scale(1.05);
+}
+
+/* Imagem de Boas-Vindas */
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção Sobre */
+.sobre {
+    margin-top: 60px;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    color: #8a2be2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+    animation: fadeIn 1s ease-in-out;  /* Animação de entrada suave */
+}
+
+.sobre p {
+    font-size: 18px;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Estilo das Listas de Livros */
+.list-section {
+    background-color: #1e1e1e;  /* Fundo cinza escuro sólido */
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);  /* Sombra com profundidade */
+    max-width: 1000px;
+    transition: transform 0.3s ease-in-out;  /* Transição para hover */
+}
+
+.list-section:hover {
+    transform: scale(1.02);  /* Efeito de zoom suave ao passar o mouse */
+}
+
+.list-section h2 {
+    border-bottom: 2px solid #8a2be2;  /* Borda roxa mais escura */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Estilo dos itens de livros */
+.book-list {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os itens da lista */
+}
+
+.book-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(42, 42, 42, 0.9);  /* Fundo translúcido */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: background-color 0.3s, transform 0.2s;
+    min-height: 60px;  /* Altura mínima para alinhar os botões e o texto */
+}
+
+.book-list li:hover {
+    background-color: #333333;  /* Mudança de cor ao passar o mouse */
+    transform: translateY(-5px);  /* Efeito de leve elevação */
+}
+
+.book-details {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-right: 30px;  /* Aumenta o espaçamento entre o título e o botão */
+    transition: color 0.3s ease;
+}
+
+.book-actions {
+    display: flex;
+    align-items: center;  /* Alinha verticalmente no centro */
+    justify-content: flex-end;
+    flex-shrink: 0;
+    gap: 15px;
+}
+
+.book-actions button {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.book-actions button:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);
+    transform: scale(1.05);
+}
+
+/* Todos os botões do mesmo tamanho e estilo */
+button, .book-actions button, .buttonLogin, .button_usuarios, .button_trofeus, .logout-button {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);  /* Gradiente com roxo mais escuro */
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s, transform 0.2s;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);  /* Sombra nos botões */
+    width: 180px;  /* Largura fixa para todos os botões */
+    text-align: center;
+}
+
+button:hover, .book-actions button:hover, .buttonLogin:hover, .button_usuarios:hover, .button_trofeus:hover, .logout-button:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);  /* Mudança no gradiente ao hover */
+    transform: scale(1.05);  /* Aumenta o botão ao hover */
+}
+
+button:active, .book-actions button:active, .buttonLogin:active, .button_usuarios:active, .button_trofeus:active, .logout-button:active {
+    transform: scale(0.98);  /* Efeito de "pressionado" */
+}
+
+/* Estilo de Inputs e Formulários */
+.inputUser, .inputPassword, .inputlogin {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);  /* Fundo translúcido escuro */
+    color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.inputUser:focus, .inputPassword:focus, .inputlogin:focus {
+    background-color: rgba(255, 255, 255, 0.2);  /* Muda cor no foco */
+    outline: none;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);  /* Sombra roxa no foco */
+}
+
+.inputUser::placeholder, .inputPassword::placeholder, .inputlogin::placeholder {
+    color: #cccccc;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; /* Prioridade alta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto translúcido */
+    backdrop-filter: blur(8px);  /* Efeito de desfoque */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    color: #ffffff;  /* Texto claro */
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra profunda ao redor da imagem */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff4040;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .list-section {
+        width: 100%;
+    }
+
+    .book-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Ajuste dos botões no contêiner de cabeçalho */
+    .header-buttons {
+        flex-direction: column; /* Alinha verticalmente em telas menores */
+        gap: 10px;              /* Espaço menor entre os botões */
+    }
+
+    .header-buttons .button-ranking {
+        width: 100%;  /* Botões ocupam toda a largura em telas menores */
+    }
+
+    button, .buttonLogin, .button_usuarios, .button_trofeus, .logout-button {
+        width: 100%;  /* Botões ocupam toda a largura em telas menores */
+    }
+
+    /* Estilização para botões "Marcar Leitura" já marcados */
+    .btn-marcar-leitura:disabled {
+        background: #808080 !important; /* Cor cinza para desabilitado */
+        cursor: not-allowed !important;
+    }
+}
+
+/* Container central para o ranking */
+.container-ranking {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1e1e1e;  /* Fundo cinza escuro sólido */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);  /* Sombra com profundidade */
+    text-align: center;
+    margin-bottom: 40px; /* Espaço extra antes do rodapé */
+}
+
+.container-ranking h1 {
+    font-size: 32px;
+    color: #8a2be2;  /* Roxo mais escuro */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo para a tabela de ranking */
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Remove o espaçamento entre bordas */
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para as células da tabela */
+table th, table td {
+    padding: 15px;
+    border: 1px solid #8a2be2;  /* Linha roxa separando células */
+    color: #e0e0e0;
+}
+
+/* Estilo para o cabeçalho da tabela */
+table th {
+    background-color: #4b0082;  /* Fundo roxo escuro para o cabeçalho */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Cor de fundo das linhas alternadas */
+table tr:nth-child(even) td {
+    background-color: #333333;  /* Cor de fundo alternada */
+}
+
+table tr:nth-child(odd) td {
+    background-color: #2a2a2a;  /* Fundo mais escuro para linhas ímpares */
+}
+
+/* Efeito hover nas linhas da tabela */
+table tr:hover {
+    background-color: #444444;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Estilo do botão Voltar */
+.button-ranking {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.2s;
+    gap: 50px;
+}
+
+.button-ranking:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);
+    transform: scale(1.05);
+}
+
+/* Estilo do botão Logout (específico) */
+.logout-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+/* Organiza a lista de livros marcados */
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(42, 42, 42, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    min-height: 60px; /* Altura mínima para alinhar todos os itens */
+    margin-bottom: 40px; /* Espaço extra antes do rodapé */
+}
+
+.book-item:hover {
+    background-color: #333333; /* Cor de fundo ao passar o mouse */
+}
+
+.book-title {
+    font-size: 18px;
+    color: #e0e0e0;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.book-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.book-actions button {
+    background: linear-gradient(45deg, #4b0082, #8a2be2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.book-actions button:hover {
+    background: linear-gradient(45deg, #3700b3, #6200ee);
+    transform: scale(1.05);
+}
+
+/* Estilo do contêiner para garantir que os botões fiquem lado a lado */
+.button-container {
+    display: flex;               /* Utiliza Flexbox para organizar os botões */
+    justify-content: center;     /* Centraliza os botões no contêiner */
+    gap: 20px;                   /* Define espaço entre os botões */
+    margin-top: 20px;            /* Espaço superior acima dos botões */
+}
+
+/* Estilo dos botões */
+.button_usuarios, .button_trofeus {
+    display: inline-block;       /* Exibe os botões como blocos em linha */
+    padding: 10px 20px;          /* Preenchimento interno dos botões */
+    background-color: #6200ee;   /* Cor de fundo */
+    color: white;                /* Cor do texto */
+    font-weight: bold;           /* Negrito no texto */
+    border-radius: 5px;          /* Bordas arredondadas */
+    text-align: center;          /* Centraliza o texto */
+    text-decoration: none;       /* Remove o sublinhado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra para destaque */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button_usuarios:hover, .button_trofeus:hover {
+    background-color: #3700b3;   /* Altera a cor ao passar o mouse */
+    transform: scale(1.05);      /* Leve aumento ao passar o mouse */
+}
+
+/* Estilização para botões "Marcar Leitura" já marcados */
+.btn-marcar-leitura:disabled {
+    background: #808080 !important; /* Cor cinza para desabilitado */
+    cursor: not-allowed !important;
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #1e1e1e00; /* Cor de fundo semi-transparente */
+    color: #e0e0e0; /* Cor do texto claro */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px; /* Espaço acima do rodapé */
+    position: relative; /* Pode ser 'static' ou 'relative' se não quiser fixar */
+}
+
+/* Container dos Links Sociais */
+.social-links {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: px;
+}
+
+/* Estilo dos Links Sociais */
+.social-links a {
+    color: #e0e0e0; /* Cor dos ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s, transform 0.3s;
+    font-size: 20px; /* Tamanho pequeno dos ícones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.social-links a:hover {
+    color: #8a2be2; /* Cor roxa ao hover */
+    transform: scale(1.2); /* Aumenta levemente o ícone */
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 600px) {
+    .social-links a {
+        margin: 0 8px;
+        font-size: 18px; /* Ajuste o tamanho para telas menores */
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto; /* Permitir rolagem se o conteúdo exceder a altura */
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra ao redor da imagem */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff4040;
+}
+/* Estilo para o modal */
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    max-width: 800px; /* Aumenta a largura do modal */
+    display: flex; /* Utiliza flexbox para organizar as colunas */
+    flex-wrap: wrap;
+}
+
+.modal-content img {
+    max-width: 40%; /* A imagem ocupará 40% do espaço */
+    height: auto;
+    border-radius: 15px;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+#bookDetails {
+    max-width: 55%; /* As informações ocuparão o restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff4040;
+}

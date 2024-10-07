@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Livros Marcados - Leitor[E]</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="meuslivros.js" defer></script>    
+</head>
+
+<body class="meuslivros">
+    <h1>Meus Livros Marcados</h1>
+    <ul id="listaLivrosMarcados" class="book-list"></ul> <!-- Lista onde os livros serão exibidos -->
+
+    <!-- Modal para visualização do livro -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="bookImage" src="" alt="Imagem do Livro" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <!-- Botão Voltar -->
+    <button class="logout-button" id="btnVoltar">Voltar</button>
+
+    <!-- Remova o script inline conflitante -->
+</body>
+
+</html>

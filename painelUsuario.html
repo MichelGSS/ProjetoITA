@@ -1,0 +1,224 @@
+<!-- painelusuario.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário - Leitor[E]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="telaUsuario">
+    <div class="welcome">
+        <h1>Bem-vindo ao Leitor[E]!</h1>
+        <p><h2>Olá, <span id="usuarioNome"></span>!</h2></p>
+    </div>
+
+    <button class="logout-button" id="logout">Sair</button>
+
+    <br>
+    <div class="geral"></div>
+
+    <!-- Listas de livros -->
+    <div class="list-section">
+        <h2>Mais Lidos</h2>
+        <ul class="book-list">
+            <li>
+                <b>A Sombra do Vento - Carlos Ruiz Zafón</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('A Sombra do Vento', 'https://m.media-amazon.com/images/I/91xOzA3VHtL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="A Sombra do Vento" 
+                        onclick="marcarLeitura('A Sombra do Vento', 600, 'Mais Lidos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>1984 - George Orwell</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('1984', 'https://m.media-amazon.com/images/I/819js3EQwbL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="1984" 
+                        onclick="marcarLeitura('1984', 328, 'Mais Lidos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>O Pequeno Príncipe - Antoine de Saint-Exupéry</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('O Pequeno Príncipe', 'https://m.media-amazon.com/images/I/71LJ4k-k9hL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="O Pequeno Príncipe" 
+                        onclick="marcarLeitura('O Pequeno Príncipe', 96, 'Mais Lidos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>O Nome do Vento - Patrick Rothfuss</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('O Nome do Vento', 'https://m.media-amazon.com/images/I/81CGmkRG9GL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="O Nome do Vento" 
+                        onclick="marcarLeitura('O Nome do Vento', 662, 'Mais Lidos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>A Menina que Roubava Livros - Markus Zusak</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('A Menina que Roubava Livros', 'https://m.media-amazon.com/images/I/61L+4OBhm-L._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="A Menina que Roubava Livros" 
+                        onclick="marcarLeitura('A Menina que Roubava Livros', 584, 'Mais Lidos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="list-section">
+        <h2>Lançamentos</h2>
+        <ul class="book-list">
+            <!-- Livros de lançamentos -->
+            <li>
+                <b>A Vida Invisível de Addie LaRue - V. E. Schwab</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('A Vida Invisível de Addie LaRue', 'https://m.media-amazon.com/images/I/810fw8crP9L._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="A Vida Invisível de Addie LaRue" 
+                        onclick="marcarLeitura('A Vida Invisível de Addie LaRue', 448, 'Lançamentos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>O Império dos Vampiros - Jay Kristoff</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('O Império dos Vampiros', 'https://m.media-amazon.com/images/I/91CmC6MtLsL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="O Império dos Vampiros" 
+                        onclick="marcarLeitura('O Império dos Vampiros', 752, 'Lançamentos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>O Problema dos Três Corpos - Liu Cixin</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('O Problema dos Três Corpos', 'https://m.media-amazon.com/images/I/81JEoeOD+4L._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="O Problema dos Três Corpos" 
+                        onclick="marcarLeitura('O Problema dos Três Corpos', 400, 'Lançamentos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>A Filha do Rei do Pântano - Karen Dionne</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('A Filha do Rei do Pântano', 'https://m.media-amazon.com/images/I/71oij0nmIOL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="A Filha do Rei do Pântano" 
+                        onclick="marcarLeitura('A Filha do Rei do Pântano', 320, 'Lançamentos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="list-section">
+        <h2>Clássicos</h2>
+        <ul class="book-list">
+            <!-- Livros clássicos -->
+            <li>
+                <b>Dom Quixote - Miguel de Cervantes</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('Dom Quixote', 'https://m.media-amazon.com/images/I/81pdXbEIZhL._UF894,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="Dom Quixote" 
+                        onclick="marcarLeitura('Dom Quixote', 1050, 'Clássicos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>Moby Dick - Herman Melville</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('Moby Dick', 'https://m.media-amazon.com/images/I/71K4OH9CqOL._UF894,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="Moby Dick" 
+                        onclick="marcarLeitura('Moby Dick', 720, 'Clássicos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>Orgulho e Preconceito - Jane Austen</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('Orgulho e Preconceito', 'https://m.media-amazon.com/images/I/71Xta4Nf7uL._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="Orgulho e Preconceito" 
+                        onclick="marcarLeitura('Orgulho e Preconceito', 432, 'Clássicos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+            <li>
+                <b>Jane Eyre - Charlotte Brontë</b>
+                <div class="book-actions">
+                    <button onclick="visualizarLivro('Jane Eyre', 'https://m.media-amazon.com/images/I/51Xtvezf6ML._AC_UF1000,1000_QL80_.jpg')">Visualizar</button>
+                    <button 
+                        class="btn-marcar-leitura" 
+                        data-book="Jane Eyre" 
+                        onclick="marcarLeitura('Jane Eyre', 500, 'Clássicos')">
+                        Marcar Leitura
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Links adicionais -->
+    <div class="button-container">
+        <a href="ranking.html" class="button_usuarios">RANKING DE USUÁRIOS</a>
+        <a href="meuslivros.html" class="button_trofeus">LISTA DE LIVROS MARCADOS</a>
+    </div>
+
+  <!-- Modal para visualização do livro -->
+<div id="bookModal" class="modal">
+    <div class="modal-content">
+        <img id="bookImage" src="" alt="Imagem do Livro">
+        <div id="bookDetails">
+            <!-- As informações do livro e botões serão adicionados dinamicamente -->
+        </div>
+        <span class="close">&times;</span>
+    </div>
+</div>
+
+
+
+    <!-- Botão de Reset Completo (Opcional, para administradores) -->
+    <!-- <button class="admin-reset-button" id="adminResetUsuarios">Resetar Todos os Usuários</button> -->
+
+    <!-- Script externo -->
+    <script src="painelusuario.js"></script>
+</body>
+</html>

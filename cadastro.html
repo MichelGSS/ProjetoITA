@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Leitor[E]</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastro.js" defer></script>
+</head>
+<body class="telaCadastro">
+    <div class="login">
+        <h1>Leitor[E]</h1>
+        <form id="cadastroForm">
+            <input class="inputlogin" type="text" name="Nome" id="Nome" placeholder="Nome de Usuário" required>
+            <br><br>
+            <input class="inputlogin" type="password" name="Senha" id="Senha" placeholder="Senha" required>
+            <br><br>
+            <button class="buttonLogin" type="submit" id="submit"><b>Cadastrar</b></button>
+            <br><br>
+            <button class="buttonLogin" id="voltar"><b>Voltar</b></button> <!-- Botão para voltar à página de login -->
+        </form>
+    </div>
+
+    <script>
+        // Função para o botão "Voltar" redirecionar para a página de login
+        document.getElementById('voltar').addEventListener('click', function(event) {
+            event.preventDefault();  // Previne comportamento padrão
+            window.location.href = 'login.html';  // Redireciona para a página de login
+        });
+    </script>
+</body>
+</html>
