@@ -19,7 +19,7 @@ document.getElementById('acessar').addEventListener('click', function() {
         // Salva o nome do usuário no sessionStorage
         sessionStorage.setItem('usuarioNome', nome);
         alert('Login bem-sucedido!');
-        window.location.href = 'painelusuario.html'; // Redireciona para a página do usuário
+        window.location.href = 'painelUsuario.html'; // Redireciona para a página do usuário
     } else {
         alert('Nome ou senha incorretos.');
     }
